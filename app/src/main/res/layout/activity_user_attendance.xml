@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userAttendanceLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".UserAttendanceActivity">
+
+    <!-- Main Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- QR Code Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Attendance QR Code"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <ImageView
+                android:id="@+id/imgQrCode"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:contentDescription="User QR Code"
+                android:src="@drawable/sample_qr_code"
+                android:background="@drawable/qr_border"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Attendance Points -->
+            <TextView
+                android:id="@+id/tvPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attendance Points: 15"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Available Prizes Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available Prizes"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Prizes List (Placeholder for RecyclerView) -->
+            <LinearLayout
+                android:id="@+id/prizeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Prize Card Example -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPrize1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:cardElevation="4dp"
+                    android:backgroundTint="#FAFAFA">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Free Protein Shake"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Required Points: 10"
+                            android:textColor="#555555"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Repeat more prize cards dynamically as needed -->
+
+            </LinearLayout>
+
+            <!-- Attendance History Button -->
+            <Button
+                android:id="@+id/btnViewHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Attendance History"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#000000"
+                android:layout_marginTop="24dp"
+                android:paddingVertical="12dp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/userBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/activity_bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subscriptionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubscriptionStatusActivity"
+    android:background="#FFFFFF">
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subscription Status"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:paddingBottom="20dp" />
+
+            <!-- Subscription Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FAFAFA">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Plan Name -->
+                    <TextView
+                        android:id="@+id/tvPlanName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gold Membership"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Dates Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Start Date:"
+                            android:textColor="#555555"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvStartDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2025-05-01"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="End Date:"
+                            android:textColor="#555555"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2025-06-01"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Remaining Days -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Days Remaining:"
+                            android:textColor="#555555"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvDaysRemaining"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18 days"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Status Badge -->
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:background="@drawable/status_active_badge"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:textSize="14sp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Renewal Prompt -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Need to renew soon? Contact reception or renew via the app."
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingHorizontal="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/userBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/activity_bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_fit_logo"
+        android:contentDescription="App Logo"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fit and Lift"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/appLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Intro Text -->
+
+    <!-- Register as Member Button -->
+
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="arial"
+        android:gravity="center"
+        android:text="A smarter way to stay fit and organized."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoginMember"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="156dp"
+        android:text="Login as Member"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegisterMember"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Register as Member"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@id/btnLoginTrainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Login as Trainer Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoginTrainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Login as Trainer"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textColor="@color/black"
+        app:cornerRadius="12dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

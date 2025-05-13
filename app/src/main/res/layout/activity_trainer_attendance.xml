@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/attendanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance Module"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- QR Camera Placeholder -->
+    <FrameLayout
+        android:id="@+id/qrCameraPreview"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        android:background="#F0F0F0"
+        android:contentDescription="QR Camera Placeholder"
+        app:layout_constraintTop_toBottomOf="@id/attendanceTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Assigned Members Label -->
+    <TextView
+        android:id="@+id/assignedMembersLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assigned Members"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/qrCameraPreview"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- CardView for Member 1 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/memberCard1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/assignedMembersLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plan: Standard | Member ID: 123456"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- History Button -->
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Attendance History"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/memberCard1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/activity_trainer_bottom_nav"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

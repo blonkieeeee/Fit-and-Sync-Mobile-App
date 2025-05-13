@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/table_row_background">
+
+    <TextView
+        android:id="@+id/memberName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/memberDetails"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+</LinearLayout>
