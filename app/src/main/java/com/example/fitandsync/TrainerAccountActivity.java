@@ -30,11 +30,11 @@ public class TrainerAccountActivity extends AppCompatActivity {
             }  else if (id == R.id.nav_income) {
                 startActivity(new Intent(TrainerAccountActivity.this, TrainerIncomeActivity.class));
                 return true;
-            } else if (id == R.id.nav_schedule) {
+            } else if (id == R.id.nav_setsession) {
                 startActivity(new Intent(TrainerAccountActivity.this, SetScheduleActivity.class));
                 return true;
-            } else if (id == R.id.nav_account) {
-                startActivity(new Intent(TrainerAccountActivity.this, TrainerAccountActivity.class));
+            } else if (id == R.id.nav_attendance) {
+                startActivity(new Intent(TrainerAccountActivity.this, TrainerAttendanceActivity.class));
                 return true;
             }
 

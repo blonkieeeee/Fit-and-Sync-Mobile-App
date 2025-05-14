@@ -22,8 +22,9 @@ public class TrainerAttendanceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_trainer_attendance);
 
-        BottomNavigationView bottomNav = findViewById(R.id.trainerBottomNav);
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
 
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
