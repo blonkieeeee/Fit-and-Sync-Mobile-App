@@ -1,5 +1,6 @@
 package com.example.fitandsync;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -8,8 +9,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -25,6 +29,21 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
+        });
+        Button verification = findViewById(R.id.registerBtn);
+        verification.setOnClickListener(v -> {
+            Intent intent = new Intent(RegisterActivity.this, Verification.class);
+            startActivity(intent);
+        });
+
+        TextView loginRedirect = findViewById(R.id.loginRedirect);
+        loginRedirect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to login screen
+                Intent intent = new Intent(RegisterActivity.this, Login.class);
+                startActivity(intent);
+            }
         });
         Spinner planSpinner = findViewById(R.id.planSpinner);
         String[] plans = {"Select Plan", "Monthly", "Quarterly", "Yearly"};

@@ -8,13 +8,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class ClaimPrizeDialog extends AppCompatActivity {
+public class UserHistoryCheck extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.dialog_claim_prize);
+        setContentView(R.layout.activity_user_history_check);
 
     }
 }

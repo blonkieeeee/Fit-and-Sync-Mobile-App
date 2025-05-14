@@ -1,6 +1,8 @@
 package com.example.fitandsync;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +17,24 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        Button btnloginmember = findViewById(R.id.btnLoginMember);
+        btnloginmember.setOnClickListener(v -> {
+            Intent intent = new Intent(Login.this, MainActivity.class);
+            startActivity(intent);
         });
+
+        Button btnregister = findViewById(R.id.btnRegisterMember);
+        btnregister.setOnClickListener(v -> {
+            Intent intent = new Intent(Login.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+
+        Button btnlogintrainer = findViewById(R.id.btnLoginTrainer);
+        btnlogintrainer.setOnClickListener(v -> {
+            Intent intent = new Intent(Login.this, TrainerLogin.class);
+            startActivity(intent);
+        });
+
     }
 }

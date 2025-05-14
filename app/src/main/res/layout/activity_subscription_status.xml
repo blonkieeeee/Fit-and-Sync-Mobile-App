@@ -173,6 +173,7 @@
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:labelVisibilityMode="labeled"
+        app:itemBackground="@null"
         app:menu="@menu/activity_bottom_nav_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

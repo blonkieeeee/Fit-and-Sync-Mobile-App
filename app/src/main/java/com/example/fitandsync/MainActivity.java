@@ -28,5 +28,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button register = findViewById(R.id.appleLogin);
+        register.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+
+        Button trainerlogin = findViewById(R.id.googleLogin);
+        trainerlogin.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TrainerLogin.class);
+            startActivity(intent);
+        });
+
     }
 }

@@ -1,7 +1,9 @@
 package com.example.fitandsync;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 import com.example.fitandsync.R;
 
@@ -23,13 +25,28 @@ public class TrainerHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trainer_home);
 
-        scheduledList = findViewById(R.id.recyclerViewScheduled);
-        bottomNav = findViewById(R.id.bottomNav);
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
 
-        // Set up RecyclerView
-        scheduledList.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MemberAdapter(this); // Your actual adapter class
-        scheduledList.setAdapter(adapter);
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.nav_setsession) {
+                startActivity(new Intent(TrainerHomeActivity.this, SetScheduleActivity.class));
+                return true;
+            } else if (id == R.id.nav_income) {
+                startActivity(new Intent(TrainerHomeActivity.this, TrainerIncomeActivity.class));
+                return true;
+            } else if (id == R.id.nav_attendance) {
+                startActivity(new Intent(TrainerHomeActivity.this, TrainerAttendanceActivity.class));
+                return true;
+            } else if (id == R.id.nav_account) {
+                startActivity(new Intent(TrainerHomeActivity.this, TrainerAccountActivity.class));
+                return true;
+            }
+
+            return false;
+        });
+
 
         // Navigation item selected listener
 

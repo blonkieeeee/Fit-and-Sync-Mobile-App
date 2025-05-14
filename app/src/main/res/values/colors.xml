@@ -6,4 +6,6 @@
     <color name="colorPrimary">#007AFF</color>
     <color name="colorPrimaryVariant">#005FCC</color>
     <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="gray_700">#616161</color>
+
 </resources>
